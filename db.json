@@ -1,0 +1,250 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "vasanth",
+      "email": "varathan2512002@gmail.com",
+      "password": "sivasiva",
+      "number": "9360733323"
+    },
+    {
+      "name": "hari",
+      "email": "hari@gmail.com",
+      "number": 1234554321,
+      "password": "hari",
+      "id": 2
+    },
+    {
+      "name": "hari1",
+      "email": "hari2@gmail.com",
+      "number": 1234567876,
+      "password": "hari",
+      "id": 3
+    }
+  ],
+  "banners": [
+    {
+      "id": 1,
+      "banner1": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fbanner1.jpg?alt=media&token=696e2508-5858-4ec5-943f-11529fdf276c",
+      "banner2": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fbanner1.jpg?alt=media&token=696e2508-5858-4ec5-943f-11529fdf276c",
+      "banner3": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fbanner3.jpg?alt=media&token=0282619c-b3ef-44df-9317-c501eb95683d"
+    }
+  ],
+  "employee": [
+    {
+      "Name": "emp1",
+      "Phone": 1234567890,
+      "Section": "MENS",
+      "Salary": 123456,
+      "EID": "EMP001",
+      "Gender": "male",
+      "date": "01/08/2023",
+      "id": 1
+    },
+    {
+      "Name": "emp2",
+      "Phone": 9876543212,
+      "Section": "WOMENS",
+      "Salary": 6788,
+      "EID": "EMP002",
+      "Gender": "male",
+      "date": "01/08/2023",
+      "id": 2
+    },
+    {
+      "Name": "emp3",
+      "Phone": 9876543211,
+      "Section": "KIDS",
+      "Salary": 6788,
+      "EID": "EMP003",
+      "Gender": "male",
+      "date": "01/08/2023",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "Name": "mens",
+      "PID": "MEN001",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fmens1.jpg?alt=media&token=64720842-149d-4403-8eec-594013388a05",
+      "Price": 789,
+      "OriginalPrice": 89,
+      "Offer": 89,
+      "Stock": 10,
+      "catogory": "MENS",
+      "lastChanges": "EMP001",
+      "review": [
+        {
+          "user": "John Doe",
+          "message": "Impressive sound quality, highly recommended!"
+        }
+
+      ]
+    },
+    {
+      "id": 2,
+      "Name": "mens",
+      "PID": "MEN002",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fmens2.jpg?alt=media&token=a89a9d26-7930-4ac0-9ebf-888c15bccf4a",
+      "Price": 789,
+      "OriginalPrice": 89,
+      "Offer": 89,
+      "Stock": 10,
+      "catogory": "MENS",
+      "lastChanges": "EMP001",
+      "review": [
+        {
+          "user": "John Doe",
+          "message": "Impressive sound quality, highly recommended!"
+        }
+
+      ]
+    }, {
+      "id": 3,
+      "Name": "mens",
+      "PID": "MEN003",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fmens3.jpg?alt=media&token=8baf119b-3995-4848-87d4-309666b77fd6",
+      "Price": 789,
+      "OriginalPrice": 89,
+      "Offer": 89,
+      "Stock": 10,
+      "catogory": "MENS",
+      "lastChanges": "EMP001",
+      "review": [
+        {
+          "user": "John Doe",
+          "message": "Impressive sound quality, highly recommended!"
+        }
+
+      ]
+    },
+    {
+      "id": 4,
+      "Name": "womens",
+      "PID": "WOM001",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fwomens1.jpg?alt=media&token=be897221-f544-43ad-af49-f74febecfe57",
+      "Price": 789,
+      "OriginalPrice": 89,
+      "Offer": 89,
+      "Stock": 59,
+      "catogory": "WOMENS",
+      "review": {
+        "id": "",
+        "user": "",
+        "message": ""
+      }
+    },
+    {
+      "id": 5,
+      "Name": "womens",
+      "PID": "KID001",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fkids1.jpg?alt=media&token=d64f8771-9848-4297-bb30-7f4fd3cbc042",
+      "Price": 789,
+      "OriginalPrice": 89,
+      "Offer": 89,
+      "Stock": 39,
+      "catogory": "KIDS",
+      "review": {
+        "id": "",
+        "user": "",
+        "message": ""
+      }
+    },
+    {
+      "id": 6,
+      "Name": "womens",
+      "PID": "KID002",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fkids2.jpg?alt=media&token=0e9c7de5-06df-456e-914d-b32d7c49f599",
+      "Price": 789,
+      "OriginalPrice": 89,
+      "Offer": 89,
+      "Stock": 59,
+      "catogory": "KIDS",
+      "review": {
+        "id": "",
+        "user": "",
+        "message": ""
+      }
+    },  {
+      "id": 7,
+      "Name": "womens",
+      "PID": "KID003",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fkids2.jpg?alt=media&token=0e9c7de5-06df-456e-914d-b32d7c49f599",
+      "Price": 789,
+      "OriginalPrice": 89,
+      "Offer": 89,
+      "Stock": 39,
+      "catogory": "KIDS",
+      "review": {
+        "id": "",
+        "user": "",
+        "message": ""
+      }
+    },
+    {
+      "id": 8,
+      "Name": "harini",
+      "PID": "WOM002",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fkids3.jpg?alt=media&token=515e9209-1c21-49b9-8f97-4be8d71a5ed2",
+      "Price": 56788,
+      "OriginalPrice": 65432,
+      "Offer": 56,
+      "Stock": 58,
+      "catogory": "WOMENS",
+      "lastChanges": "EMP002",
+      "review": {
+        "id": "",
+        "user": "",
+        "message": ""
+      }
+    },
+    {
+      "id": 9,
+      "Name": "harini",
+      "PID": "WOM003",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/jewels-a3762.appspot.com/o/kids%2Fwomens3.jpg?alt=media&token=cd381888-db01-4cfa-8ef7-0b1fb7591c45",
+      "Price": 56788,
+      "OriginalPrice": 65432,
+      "Offer": 56,
+      "Stock": 25,
+      "catogory": "WOMENS",
+      "lastChanges": "EMP002",
+      "review": {
+        "id": "",
+        "user": "",
+        "message": ""
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "PID": "MEN001",
+      "userName": "hari",
+      "phoneNo": "9360733323",
+      "Address": "3/144 A,Govt school street,Thirumangalam-625706",
+      "productName": "emp1",
+      "productPrice": "20000",
+      "quantity": 2,
+      "grandTotal": 40000
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

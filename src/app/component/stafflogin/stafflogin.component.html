@@ -1,0 +1,35 @@
+<div class="adminlogin">
+    <!-- <h1 id="adminLogo">CK MENS AND WOMENS WEAR </h1> -->
+    <!-- <span id="backarrow" (click)="back()"><i style="color:rgb(211, 211, 202)"class="bi bi-arrow-left-circle"></i></span> -->
+
+    <div class="content">
+        <!-- <div class="profileIcon">
+        </div> -->
+        <div style="display:flex;flex-direction: column;align-items: center;">
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;">Login</h1>
+        <h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;">OfficeWork</h4><br>
+    </div>
+
+        <form (ngSubmit)="onSubmit()">
+            <div style="display: flex;align-items: center;width:78%">
+          <i  class="bi bi-person-workspace"></i>
+            <input  type="text" id="password"  placeholder="Staff ID" name="EId" [(ngModel)]="EID">
+        </div>
+        <div style="display:flex;align-items: center;width:78%">
+        <i  class="bi bi-telephone"></i>
+            <input type="number" id="adminId" placeholder="Phone No" name="Phone" [(ngModel)]="Phone">
+        </div>
+            <p id="validationMessage">{{showError}}</p>
+
+            <button type="submit">LOGIN</button>
+        </form>
+        <p>Forgot <span>Password?</span></p>
+
+    </div>
+    <div class="content2">
+
+
+    </div>
+    <!-- <button id="adminBackButton" routerLink="/"> <i class="bi bi-house-door-fill"></i>
+        &nbsp; Home</button> -->
+</div>

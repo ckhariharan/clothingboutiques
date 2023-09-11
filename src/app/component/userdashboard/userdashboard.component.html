@@ -1,0 +1,227 @@
+<div>
+<div class="nav">
+  <div class="leftnavbar">
+    <h5>Free shipping on all orders $75+</h5>
+  </div>
+  <div class="rightnavbar">
+    <button (click)="logout()"> logout</button>
+  </div>
+</div>
+
+<div >
+<div id="title" class="title">
+  <h1 >ck</h1>
+  <p>𝖒𝖊𝖓𝖘 𝖆𝖓𝖉 𝖜𝖔𝖒𝖊𝖓𝖘 𝖜𝖊𝖆𝖗</p>
+</div>
+<div class="carousel-container">
+  <div class="carousel-slide" *ngFor="let image of images; let i = index" [ngClass]="{ 'active': i === activeIndex }">
+    <img [src]="image" alt="Slide {{i + 1}}">
+  </div>
+</div>
+<div class="btn1">
+    <div id="margin" style="display: flex;flex-direction: column;width:9%;">
+    <img id="btn1" (click)="all()" src="/assets/images/user/alllogo.jpg" alt="productImg">
+    <h3 id="btn1" style="z-index: 100;display: flex;justify-content: center;">All</h3>
+</div>
+
+<div id="margin"style="display: flex;flex-direction: column;align-items: center;justifycontent:center">
+    <img id="btn1" (click)="mensp()" src="/assets/images/user/menslogo.jpg" alt="productImg">
+    <h3 id="btn1"style="z-index: 100;display: flex;justify-content: center;">Mens</h3>
+</div>
+<div id="margin" style="display: flex;flex-direction: column;align-items: center;">
+    <img id="btn1" (click)="womensp()" src="/assets/images/user/womenslogo.jpg" alt="productImg">
+    <h3 id="btn1"style="z-index: 100;display: flex;justify-content: center;">Womens</h3>
+   </div>
+<div id="margin" style="display: flex;flex-direction: column;align-items: center;">
+    <img id="btn1" (click)="kidsp()" src="/assets/images/user/kidlogo.jpg" alt="productImg">
+    <h3 id="btn1" style="z-index: 100;display: flex;justify-content: center;">Kids</h3>
+</div>
+
+
+</div>
+</div>
+
+<div class="products" *ngIf="isloading">
+    <div class="loading-spinner" *ngIf="isloading"></div>
+
+</div>
+
+<div class="products" >
+    <div class="products-container"  *ngIf="!isloading" >
+        <div class="card" *ngFor="let product of filteredProducts" (click)="openProduct(product)">
+            <div class="image">
+                <img src="{{product.imgUrl}}" alt="product-img">
+            </div>
+            <div style="display: flex;position: relative; flex-direction: column; padding:2vh">
+                <ul style="list-style: none;">
+                    <li style="font-size: 3vh;">{{product.Name}}</li>
+
+                    <div *ngIf="product.Stock > 0">
+                        <li style="font-size: 12px; margin: 1vh;">{{ product.Stock }} - items only left</li>
+                    </div>
+                    <div *ngIf="product.Stock === 0">
+                        <li style="font-size: 12px; margin: 1vh; color: red;">Out of Stock</li>
+                    </div>
+                </ul>
+                <ul id="Cardprice"
+                    style="display: flex; list-style: none; align-items: center; justify-content: space-around; width: 100%;">
+                    <li style="font-size: 3vh;">{{product.Price}}/-</li>
+                    <li style="font-size: 14px; color: rgb(255, 96, 96);"><s>{{product.OriginalPrice}}</s></li>
+                    <li style="font-size: 12px; color: green;">{{product.Offer}}% </li>
+                </ul>
+                <ul
+                    style="position: absolute;align-items: center;justify-content: space-evenly; width: 100%; bottom: 10%;list-style: none; display: flex;">
+                    <li>
+                        <div *ngIf="product.Stock > 0">
+                            <button
+                                style="color: #fff; border: none;padding-inline: 5vh; z-index: 5; padding-block: 1vh; background-color: rgb(0, 119, 255); border-radius: 0.7vh;"
+                                (click)=" openProduct(product); openProductDiolog = false; openPaymentDiolog = true">Buy</button>
+                        </div>
+                        <div *ngIf="product.Stock === 0"> <button style="color: #fff; border: none;padding-inline: 5vh; z-index: 5; padding-block: 1vh;   background-color: rgb(0, 119, 255);opacity: 0.5;
+                                cursor: not-allowed; border-radius: 0.7vh;">Buy</button>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <i *ngIf="!product.wishlist" (click)="toggleWishlist(product.id)" class="bi bi-heart"></i>
+                        <i *ngIf="product.wishlist" (click)="toggleWishlist(product.id)" class="bi bi-heart"></i>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="openProductDiolog" class="details">
+    <div class="cancelButton" (click)="openProductDiolog = false">
+        <button><i class="bi bi-x-square"></i></button>
+    </div>
+    <div class="left">
+
+        <div class="image">
+            <img src="{{diologData.imgUrl}}" alt="productImg">
+        </div>
+
+        <div class="buttons" *ngIf="diologData.Stock > 0">
+            <button (click)=" openProductDiolog = false; openPaymentDiolog = true" style="z-index: 10000;">Buy<i
+                    class="bi bi-cart4"></i></button>
+            <button style="background-color: #ffae00;">wishlist <i class="bi bi-heart"></i></button>
+        </div>
+
+        <div class="buttons" *ngIf="diologData.Stock === 0">
+            <button style="z-index: 10000;opacity: 0.5; cursor: not-allowed;">Buy<i
+                    class="bi bi-cart4"></i></button>
+            <button style="background-color: #ffae00;">wishlist <i class="bi bi-heart"></i></button>
+        </div>
+
+    </div>
+    <div class="right">
+
+        <div class="title">
+
+            <h1 >{{diologData.Name}}</h1>
+
+            <div *ngIf="diologData.Stock > 0">
+                <p>{{diologData.Stock}} Items only left</p>
+            </div>
+
+            <div *ngIf="diologData.Stock === 0">
+                <p style="color: red;">Out of stock</p>
+            </div>
+
+            <h1>{{diologData.Price}}/-</h1>
+            <h2><s>{{diologData.OriginalPrice}}</s></h2>
+            <h5>{{diologData.Offer}}% offer</h5>
+
+        </div>
+        <div class="review">
+            <div class="textbox">
+                <input type="text" placeholder="Send your reviews..." [(ngModel)]="postMessage" >
+                <i class="bi bi-send-fill" (click)="sendReview();"></i>
+            </div>
+            <div class="content">
+                <div class="card" *ngFor="let review of diologData.review">
+                    <h4 style="margin-top:2px">{{review.user}}</h4>
+                    <p style="font-weight: 100; font-size: 11px; padding: 5px;">{{review.message}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="payment" *ngIf="openPaymentDiolog">
+    <div class="title">
+        <h2>PAYMENT</h2>
+    </div>
+    <div class="textFields">
+        <form>
+            <input type="text" placeholder="Plot / Door no." name="doorno" [(ngModel)]="doorno">
+            <input type="text" placeholder="Street Name" name="street" [(ngModel)]="street">
+            <input type="text" placeholder="City / Town" name="city" [(ngModel)]="city">
+            <input type="number" placeholder="Pincode" name="pincode" [(ngModel)]="pincode">
+            <p style="color: red;">{{showError}}</p>
+        </form>
+        <div class="amount">
+            <div class="detail">
+                <div class="productName">
+                    <p>{{diologData.Name}}</p>
+                    <p>Shipping Fee</p>
+                </div>
+                <div class="productPrice">
+                    <p>{{diologData.Price}}/-</p>
+                    <p>0/-</p>
+                </div>
+            </div>
+            <div class="quantity">
+                <h3>Quantity</h3>
+                <div class="quantity-control">
+                    <button (click)="decreaseQuantity()">-</button>
+                    <span class="quantity">{{ quantity }}</span>
+                    <button (click)="increaseQuantity()">+</button>
+                </div>
+            </div>
+            <p style="color: red;" id="paymentError">{{showStockIssue}}</p>
+            <div class="total">
+                <h3>Grand Total</h3>
+                <h3>{{grandTotal}}/-</h3>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <button style="background-color: red;" (click)="performPaymentCancel()">Cancel<i
+                class="bi bi-x-square"></i></button>
+        <button (click)="validation();">Place Order <i class="bi bi-cart4"></i></button>
+    </div>
+</div>
+
+<div class="advertisement">
+    <div class="startad">
+    <div class="leftad">
+<h1>online or showroom</h1>
+<p id="p">you can visit our showroom at the following time</p>
+<h2>weekdays</h2>
+<p>mon-fri: 10am-4:30pm</p>
+
+<h2>weekends</h2>
+<p>sat: By Appointment</p>
+<p>sun: closed</p>
+    </div>
+
+
+    <div class="rightad">
+<h1>contact</h1>
+<h2>phone</h2>
+<p>+91 7708243990</p>
+<h2>Email</h2>
+<p>hari@gmail.com</p>
+<h2>ADDRESS</h2>
+<p>kamaraj st</p>
+<p>thirumangalam</p>
+    </div>
+</div>
+    <div class="about">
+        ck mens and womens wear
+    </div>
+</div>
+
+
+
+
+</div>

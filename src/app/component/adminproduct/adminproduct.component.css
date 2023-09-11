@@ -1,0 +1,366 @@
+.nav{
+    background-color: rgb(222, 188, 18);
+    height:7vh;
+    width:100%;
+    justify-content: space-between;
+    display: flex;
+    position: sticky;
+    top: 0;
+  }
+  .leftnavbar{
+    margin-inline:20px;
+  }
+  .leftnavbar h5{
+    color:rgb(243, 223, 127);
+    text-transform: capitalize;
+    font-size: 13px;
+    margin-top: 2vh;
+  }
+    i{
+  color:black;
+    }
+  .rightnavbar {
+    margin-inline: 20px;
+    justify-content: space-between;
+    display: flex;
+  padding: 1px;
+  margin-right: 10px;
+  
+  }
+  .rightnavbar input{
+    width: 160px;
+ margin-top: 6px;
+    height:18px;
+    margin-right: 20px;
+    color:Black;
+font-weight: 400;
+background-color:rgb(219, 207, 146);
+border-color:rgb(205, 186, 95);  
+
+  }
+  #logout{
+    width:90px;
+    height:33px;
+color:Black;
+font-weight: 400;
+background-color:rgb(219, 207, 146);
+border-color:rgb(205, 186, 95);  
+margin-top: 1px;
+  }
+  
+  
+  .title{
+    background-color: rgb(217, 235, 235);
+    height:30vh;
+    display: flex;
+    justify-content: center;
+  
+  }
+  .title h2{
+  align-items: center;
+  display: flex;
+  font-size: 110px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  
+  }
+  .title p{
+    align-items: center;
+  display: flex;
+  margin-right: 10px;
+  margin-top:80px ;
+  margin-left: 0;
+  }
+  
+  .parent{
+    justify-content: space-between;
+    background-color: black;
+    display: flex;
+    width:100%;
+    height:80vh;
+  }
+  
+  .childleft{
+    background-color: rgb(183, 183, 221);
+    width:20%;
+    justify-content: center;
+    align-items: center;
+  flex-direction: column;
+  display: flex;
+height:97vh;
+  
+  }
+  .childleft img{
+    height:150px;
+    width:150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+  }
+ 
+.childleft h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  display: flex;
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 18px;
+  padding-block: 10px;
+  background-color:rgb(245, 244, 244);
+  width:90%;
+  margin-left: 35px;
+  height: 20px;
+  border-radius: 10px;
+}
+.childleft h1:hover{
+  color: rgb(245, 244, 244);
+  
+}
+
+
+.content {
+  width: 80%;
+  height: 75vh;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  background-color: rgb(245, 244, 244);
+}
+
+/* 
+.content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(247, 251, 255);
+} */
+
+.nav button,
+#change {
+    padding-inline: 2vh;
+    padding-block: 2vh;
+    background-color: #1442e9;
+    color: #fff;
+    border: none;
+    border-radius: 1vh;
+}
+
+.nav button:hover,
+#change:hover {
+    background-color: #102a85;
+}
+
+.nav h1 {
+    padding-block: 3vh;
+    color: aliceblue;
+}
+
+.nav ul {
+    padding-block: 15vh;
+    color: aliceblue;
+    list-style: none;
+    text-align: center;
+}
+
+.nav ul li {
+    padding-block: 2.5vh;
+    font-size: 3vh;
+    padding-inline: 50vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav ul li:hover,
+.nav ul li:nth-child(4) {
+    background-color: #1442e9;
+}
+
+.nav ul li i {
+    padding-inline: 1vh;
+}
+
+.filter-dropdown select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f0f2f5;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 25vh;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-dropdown select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.filter-dropdown select option {
+    padding: 8px;
+}
+
+.filter-dropdown select:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    width: 30%;
+}
+
+.category {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+.products-container {
+    width: 100%;
+    max-height: 80vh;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.card {
+    width: 49%;
+    height: 40vh;
+    border: 1px solid #ccc;
+    display: flex;
+}
+
+.image {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn{
+  height:20px;
+  width:40px;
+  margin:10px;
+}
+/* 
+.nav button, #change {
+  padding-inline: 2vh;
+  padding-block: 2vh;
+  background-color: #1442e9;
+  color: #fff;
+  border: none;
+  border-radius: 1vh;
+} */
+/* 
+.nav button:hover, #change:hover  {
+  background-color: #102a85;
+}
+
+.nav h1 {
+  padding-block: 3vh;
+  color: aliceblue;
+}
+
+.nav ul {
+  padding-block: 20vh;
+  color: aliceblue;
+  list-style: none;
+  text-align: center;
+}
+
+.nav ul li {
+  padding-block: 2.5vh;
+  font-size: 3vh;
+  padding-inline: 50vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.nav ul li:hover, .nav ul li:nth-child(1){
+  background-color: #1442e9;
+}
+.nav ul li i {
+  padding-inline: 1vh;
+}
+
+.layout-content {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout-content .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout-content .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout-content .left h3, .right h3 {
+  font-weight: 100;
+  margin-bottom: 1vh
+}
+
+.layout-content .left .img{  
+  min-width: 45vh;
+  min-height: 15vh;
+  margin: 2vh;
+  background-color: aliceblue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.layout-content .right input{
+  margin: 1vh;
+  padding: 1vh;
+  padding-left: 2vh;
+width: 70%;
+height: 4vh;
+border: none;
+background-color: rgb(194, 194, 248);
+border-radius: 1vh;
+} */
+
+/* #change {
+  margin-top: 4vh;
+} */

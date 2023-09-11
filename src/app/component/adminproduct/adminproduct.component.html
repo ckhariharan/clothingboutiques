@@ -1,0 +1,61 @@
+<div class="nav">
+    <div class="leftnavbar">
+        <h5>Free shipping on all orders $75+</h5>
+    </div>
+    <div class="rightnavbar" >
+        <!-- <input type="text" [(ngModel)]="Search" placeholder="..search" (keyup)="search()"> -->
+        <button id="logout" (click)="logout()"> logout</button>
+    </div>
+</div>
+<div class="title">
+    <h2>ck </h2>
+    <p>𝖒𝖊𝖓𝖘 𝖆𝖓𝖉 𝖜𝖔𝖒𝖊𝖓𝖘 𝖜𝖊𝖆𝖗</p>
+</div>
+<div class="parent">
+    <div class="childleft">
+        <img src="/assets/images/admin/db.jpg">
+        <h1 style="background-color:rgb(183, 183, 221);" (click)="admindashboard()"> <i style="font-size:large;"
+                class="bi bi-house-door-fill"></i>&nbsp;&nbsp;Home </h1><br>
+        <h1 style="background-color:rgb(183, 183, 221);" (click)="adminstaff()" ><i style="font-size:large;"
+                class="bi bi-person-fill-add"></i>&nbsp;&nbsp; Staff</h1><br>
+        <h1 style="color:black " (click)="adminproduct"><i style="font-size:large;"
+            class="bi bi-bar-chart-line-fill"></i> &nbsp;&nbsp;product-details</h1><br>
+        <h1 style="background-color:rgb(183, 183, 221);" ><i style="font-size:large;"
+            class="bi bi-bank2"></i>&nbsp;&nbsp;about</h1><br>
+    </div>
+    <div class="content">
+        <div class="search">
+            <div class="filter-dropdown" style="display: flex;">
+                <select id="categorySelect" [(ngModel)]="selectedCategory" name="selectedCategory" (change)="filterProductsByCategory()">
+                    <option value="all">All Categories ▼</option>
+                    <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+                </select>
+            </div>
+        <button id="btn" (click)="mensp()">mens</button>
+
+            <input type="text" [(ngModel)]="searchTerm" (keyup)="searchProducts()"
+            placeholder="🔎︎  Search product...">
+        </div>
+        <div class="products-container">
+            <div class="card" *ngFor="let product of filteredProducts">
+                <div class="image">
+                   <img style="height: 85%; width: 95%;" src="{{product.imgUrl}}" alt="product-img">
+                </div>
+                <div style="display: flex; flex-direction: column; padding:2vh">
+                    <ul style="list-style: none;">
+                        <li style="font-size: 5vh;">{{product.Name}}</li>
+                        <li>{{product.PID}}</li>
+                        <li> STOCK - {{product.Stock}}</li>
+                    </ul>
+                    <ul style="display: flex; margin-top: 3vh; list-style: none; align-items: center; justify-content: space-around; width: 100%;">
+                        <li style="font-size: 4vh; margin: 1vh;">{{product.Price}}/-</li>
+                        <li style="font-size: 3.5vh; color: rgb(124, 136, 146);margin: 1vh;"><s>{{product.OriginalPrice}}</s></li>
+                        <li style="font-size: 3vh;margin: 1vh;">{{product.Offer}}%</li>
+                    </ul>
+                    <p style="margin-top: 3vh;">Last updated by {{product.lastChanges}}</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

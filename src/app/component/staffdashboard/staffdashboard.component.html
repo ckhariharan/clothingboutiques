@@ -1,0 +1,94 @@
+<div class="staff">
+    <!-- <div class="nav" *ngFor="let employee of EmployeeList">
+        <h2 style="padding-inline: 5% ;">
+            Hey! {{employee.Gender === 'male' ? 'Mr.' : 'Mrs.'}}{{employee.Name}}
+        </h2>
+       
+
+
+        <div style="display: flex;  width: 40%;">
+           
+            <h2 style="font-size: 3vh;">{{employee.Section}}'s Branch</h2>
+            <button (click)="logout()" style="border: none; background-color: red; color: white; border-radius: 1vh; padding-block: 4vh;">LOGOUT <i class="bi bi-power"></i></button>
+        </div>
+    </div> -->
+    <div class="nav">
+        <div class="leftnavbar">
+            <h5>Free shipping on all orders $75+</h5>
+        </div>
+        <div class="rightnavbar" >
+            <!-- <input type="text" [(ngModel)]="Search" placeholder="..search" (keyup)="search()"> -->
+            <input type="text" placeholder=" 🔎︎   Search Product" [(ngModel)]="searchTerm" (keyup)="searchEmployees()">
+
+            <button id="logout" (click)="logout()"> logout</button>
+        </div>
+    </div><div>
+    <div class="title">
+        <h2>ck </h2>
+        <p>𝖒𝖊𝖓𝖘 𝖆𝖓𝖉 𝖜𝖔𝖒𝖊𝖓𝖘 𝖜𝖊𝖆𝖗</p>
+    </div>
+    <div class="nav"  *ngFor="let employee of EmployeeList">
+        <div id="staffname" >
+        <h2 id="staffnameh2">
+           Staff-Name : {{employee.Gender === 'male' ? 'Mr.' : 'Mrs.'}}{{employee.Name}}
+        </h2>
+        </div>
+        <div id="staffsection">
+           
+            <h2 id="staffsectionh2" >{{employee.Section}}'s Section </h2>
+        </div>
+    </div>
+</div>
+    <div class="content">
+        <div class="right"><br>
+            <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;color: rgb(236, 170, 84);">Add New Product</h3>
+            <form (ngSubmit)="onSubmit()" [formGroup]="createProductForm">
+                <input type="text" placeholder="image URL" name="imgUrl" [(ngModel)]="imgUrl" formControlName="imgUrl">
+                <input type="text" placeholder="name" name="Product Name" [(ngModel)]="Name" formControlName="Name">
+                <input type="number" placeholder="price" name="Price" [(ngModel)]="Price" formControlName="Price">
+                <input type="number" placeholder="orginalPrice" name="orginalPrice" [(ngModel)]="OriginalPrice" formControlName="OriginalPrice">
+                <input type="number" placeholder="offer" name="Offer" [(ngModel)]="Offer" formControlName="Offer">
+                <input type="number" placeholder="stock" name="Stock" [(ngModel)]="Stock" formControlName="Stock">
+                <p style="color: red;padding-bottom: 3vh;">{{showError}}</p>
+                <div style="display: flex; width: 100%; justify-content: center;">
+                <!-- <button (click)="resetFormFields()" *ngIf="!showEditButton" style="margin-right: 2vh; background-color: red;">Reset</button> -->
+                <button type="submit" *ngIf="!showEditButton" style="background-color:azure;color: black;">Add</button>
+                <button  (click)="updateData(); this.showEditButton = false; this.resetFormFields()" *ngIf="showEditButton" style="margin-right: 2vh;">Update</button>
+                <button (click)="this.showEditButton = false; resetFormFields()" *ngIf="showEditButton" style="background-color: red;">Cancel</button>
+            </div>
+            </form>
+        </div>
+        <div class="left">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>P-ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+    <th id="ori-price">Ori-Price</th>
+                            <th>Discount</th>
+                            <th>stock</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody style="margin-top: 15px;" *ngFor="let product of ProductList">
+                        <td>{{product.PID}}</td>
+                        <td>{{product.Name}}</td>
+                        <td>{{product.Price}}</td>
+                        <td>{{product.OriginalPrice}}</td>
+                        <td>{{product.Offer}}</td>
+                        <td>{{product.Stock}}</td>
+                        <td><button  (click)="deleteList(product.id)" style="font-size: 4vh; color: red; border: none; background: none; ">
+                                <i class="bi bi-trash3-fill"></i>
+                            </button>
+                            <button (click)="editAction(product)" style="font-size: 4vh; background: none ; border: none; color: #1442e9;">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                        </td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>

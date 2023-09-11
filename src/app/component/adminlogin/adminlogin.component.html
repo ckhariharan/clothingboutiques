@@ -1,0 +1,48 @@
+<div class="adminlogin">
+    <!-- <h1 id="adminLogo">CK MENS AND WOMENS WEAR </h1> -->
+    <!-- <span id="backarrow" (click)="back()"><i style="color:rgb(211, 211, 202)"class="bi bi-arrow-left-circle"></i></span> -->
+
+    <div class="content">
+        <!-- <div class="profileIcon">
+        </div> -->
+        <div id="adminlogin" >
+<h1>Admin Login</h1>
+     
+    </div>
+
+        <form (ngSubmit)="onSubmit()">
+            <div style="display: flex;align-items: center;width:78%">
+          <i style="font-size: 5vh;" class="bi bi-person-square"></i>
+            <input  type="text" id="password"  placeholder="Admin-Id" name="adminId" [(ngModel)]="adminId">
+        </div>
+        <div style="display:flex;align-items: center;width:78%">
+        <i style="font-size: 5vh;" class="bi bi-person-lock"></i>
+            <input type="password" id="adminId" placeholder="********" name="password"  [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password">
+        </div>
+        
+            <p style="position: fixed;" id="validationMessage">{{showError}}</p>
+<br>
+<br>
+           
+                <div class="checkbox" >
+                    <input type="checkbox" name="showPassword" [(ngModel)]="showPassword">&nbsp;
+                    <p *ngIf="showPassword;else elseblock">show password</p>
+                    <ng-template #elseblock>
+                        <p>unshow password</p>
+                    </ng-template>
+                </div>
+            
+    
+
+            <button type="submit">LOGIN</button>
+        </form>
+    
+
+    </div>
+    <div class="content2">
+
+
+    </div>
+    <!-- <button id="adminBackButton" routerLink="/"> <i class="bi bi-house-door-fill"></i>
+        &nbsp; Home</button> -->
+</div>

@@ -1,0 +1,169 @@
+<div class="nav">
+    <div class="leftnavbar">
+        <h5>Free shipping on all orders $75+</h5>
+
+
+    </div>
+    <div class="rightnavbar">
+        <!-- <input type="text" [(ngModel)]="searchTerm" placeholder=" 🔎︎ search" (keyup)="searchEmployees()"> -->
+
+        <button (click)="logout()"> logout</button>
+
+
+    </div>
+
+</div>
+
+
+
+
+<div class="title">
+
+    <h2>ck </h2>
+    <p>𝖒𝖊𝖓𝖘 𝖆𝖓𝖉 𝖜𝖔𝖒𝖊𝖓𝖘 𝖜𝖊𝖆𝖗</p>
+
+</div>
+
+
+<div class="parent">
+    <div class="childleft">
+        
+        <img src="/assets/images/admin/db.jpg">
+        <h1 style="background-color:rgb(183, 183, 221);" (click)="admindashboard()"> <i style="font-size:large;"
+                class="bi bi-house-door-fill"></i>&nbsp;&nbsp; Home</h1><br>
+        <h1 style="color: black;" (click)="adminstaff()"><i style="font-size:large;"
+                class="bi bi-person-fill-add"></i>&nbsp;&nbsp;staff</h1><br>
+        <h1 style="background-color:rgb(183, 183, 221);" (click)="adminproduct()" ><i style="font-size:large;"
+            class="bi bi-bar-chart-line-fill"></i>&nbsp;&nbsp;product-details</h1><br>
+        <h1 style="background-color:rgb(183, 183, 221);"><i style="font-size:large;"
+                class="bi bi-bank2"></i>&nbsp;&nbsp;about</h1><br>
+
+
+
+
+
+
+    </div>
+    <div class="content" >
+        <div class="container">
+            <div class="left" ><br>
+                <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important">Create New Staff</h1>
+                <form (ngSubmit)="onSubmit()" [formGroup]="createEmployeeForm">
+                    <div class="">
+                    <input type="text" placeholder="Employee Name" [(ngModel)]="Name" formControlName="Name">                        
+                    <input type=""  readonly   value="{{ formattedDate}}" formControlName="{{ formattedDate}}">
+                </div>
+                    <div class="">
+                        <input type="number" placeholder="Phnone" [(ngModel)]="Phone" formControlName="Phone">
+                        <input type="number" placeholder="salary" [(ngModel)]="Salary" formControlName="Salary">
+                    </div>
+                    <div class="" style="margin-right: 3%; display: flex;flex-direction: row;"> 
+                        <div>
+                        <input type="text" [placeholder]="lastEID" [(ngModel)]="EID" [value]="lastEID"
+                            formControlName="EID" readonly>
+                        </div><div style="display: flex;">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="male" [(ngModel)]="Gender"
+                                    formControlName="Gender"> Male
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="female" [(ngModel)]="Gender"
+                                    formControlName="Gender"> Female
+                            </label>
+                        </div>
+                    </div>
+                    <div class="">
+                        
+                            <select [(ngModel)]="Section" formControlName="Section">
+                                <option value="">Select Branch ▼</option>
+                                <option value="MENS">Mens-section</option>
+                                <option value="WOMENS">Womens-section</option>
+                                <option value="KIDS">kids-section</option>
+                            </select>
+
+                        
+                    </div>
+                <P style="color: red;">{{showError}}</P>
+
+                    <div>
+                        <!-- <button style="background-color: rgb(255, 38, 0);" (click)="resetFormFields()">Reset</button> -->
+                        <button  type="submit"  *ngIf="!isloading">Add</button>
+
+                    </div>
+                    <div class="loading-spinner" *ngIf="isloading"></div>
+
+
+                </form>
+
+            </div>
+            <!-- <div class="right">
+
+                <div class="table-container">
+                    <table>
+                        <caption>Employee Table</caption>
+                        <thead>
+                            <tr>
+                                <th>E-ID</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody style="margin-top: 15px;" *ngFor="let employee of EmployeeList">
+                            <td>{{employee.EID}}</td>
+                            <td>{{employee.Name}}</td>
+                            <td>{{employee.Phone}}</td>
+                            <td><button style="font-size: 4vh; background: none ; border: none; color: #1442e9;"
+                                    (click)="toggleDialog(employee);  editAction(employee);">
+                                    <i class="bi bi-credit-card-2-front"></i>
+                                </button>
+                            </td>
+                        </tbody>
+                    </table>
+                </div>
+            </div> -->
+        </div>
+        <div class="diolog" *ngIf="showDialog">
+            <form [formGroup]="updateEmployeeForm">
+                <div class="name">
+                    <h1 *ngIf="!showTextBox">{{Gender}}&nbsp;{{selectedUser.Name}}</h1>
+                    <input type="text" *ngIf="showTextBox" formControlName="Name" class="blinking-cursor">
+                </div>
+                <div class="details">
+                    <div class="rightdiolog">
+                        <h5>Departmet &nbsp;:</h5>
+                        <h5>E-ID &nbsp;:</h5>
+                        <h5>Phone No &nbsp;:</h5>
+                        <h5>Salary &nbsp;:</h5>
+                        <h5>Gender &nbsp;:</h5>
+                    </div>
+                    <div class="leftleftdiolog">
+                        <h5 *ngIf="!showTextBox"> &nbsp; {{selectedUser.Departmet}}</h5>
+                        <input type="text" *ngIf="showTextBox" formControlName="Section" class="blinking-cursor">
+                        <h5 *ngIf="!showTextBox"> &nbsp; {{selectedUser.EID}}</h5>
+                        <input type="text" *ngIf="showTextBox" formControlName="EID" class="blinking-cursor">
+                        <h5 *ngIf="!showTextBox"> &nbsp; {{selectedUser.Phone}}</h5>
+                        <input type="text" *ngIf="showTextBox" formControlName="Phone" class="blinking-cursor">
+                        <h5 *ngIf="!showTextBox"> &nbsp; {{selectedUser.Salary}}</h5>
+                        <input type="text" *ngIf="showTextBox" formControlName="Salary" class="blinking-cursor">
+                        <h5 *ngIf="!showTextBox"> &nbsp; {{selectedUser.Gender}}</h5>
+                        <input type="text" *ngIf="showTextBox" formControlName="Gender" class="blinking-cursor">
+                    </div>
+                </div>
+                <P style="color: #1442e9;">{{showUpdateError}}</P>
+                <div class="actions">
+                    <button *ngIf="!showTextBox" id="negative" (click)="deleteList(selectedUser.id)">Delete <i
+                            class="bi bi-trash3-fill"></i></button>
+                    <button *ngIf="!showTextBox" id="positive" (click)="  onEdit(); editAction(employee);">Edit <i
+                            class="bi bi-pencil-square"></i></button>
+                    <button *ngIf="showTextBox" id="negative" (click)="  onEdit(); editAction(employee);">Cancel <i
+                            class="bi bi-x-octagon-fill"></i></button>
+                    <button *ngIf="showTextBox" id="positive" type="submit" (click)="updateData(selectedUser.id)">Save
+                        <i class="bi bi-clipboard-check-fill"></i></button>
+                    <button class="cancelButton" (click)="toggleDialog(employee)"><i
+                            class="bi bi-x-square"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

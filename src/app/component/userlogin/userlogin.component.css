@@ -1,0 +1,180 @@
+.body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/assets/images/loginimg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+
+}
+
+
+.moving-text {
+    position: absolute;
+    top: 22vh;
+    right: 0;
+    font-size: 45%;
+    color: rgba(239, 245, 243, 0.751);
+    
+    font-weight: 700;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    animation: moveRightToLeft 10s infinite;
+    /* Adjust duration and timing function as needed */
+    font-family: "latha,sans-serif";
+
+    text-transform: capitalize;
+}
+
+.nonmoving-text {
+    position: absolute;
+    top: 14.5vh;
+    font-size: 180%;
+    font-weight: 600;
+    border-bottom: 2px dotted;
+    color: rgb(196, 241, 226);
+    font-family: Gotham;
+}
+
+
+@keyframes moveRightToLeft {
+    0% {
+        right: 46.9%;
+        /* Start offscreen to the right */
+    }
+
+    100% {
+        right: 45%;
+        /* Reach the left edge */
+    }
+}
+
+
+
+.checkboxandnewmember{
+    display: flex;
+    flex-direction: row;
+    padding-inline: 9px;
+     width:180%;
+     align-items: center;
+     justify-content: center;
+     font-size:14px;
+     color: rgba(239, 245, 243, 0.751);
+}
+
+.checkbox{
+    display:flex;
+     margin-right: 15%;
+     width:20%;
+}
+
+
+.newmember{
+    margin-inline-start: 20%;
+    display: flex;
+    position: fixed;
+}
+@media screen and  (max-width: 767px) {
+    .body {
+        background-image: linear-gradient(rgba(3, 2, 2, 0.3), rgba(6, 4, 4, 0.6)), url('/assets/images/admin/adminimage.jpg');
+    
+    }
+
+#b{
+    background-color: rgb(220, 213, 213);
+    opacity: 0.4;
+    color: black;
+border-color: dotted rgb(220, 213, 213) ;
+}
+
+
+   
+.moving-text{
+    display: none;
+
+}
+.nonmoving-text{
+color: rgb(196, 215, 209);
+top: 11.5vh;
+font-size: 60px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+
+}
+.checkboxandnewmember{
+    padding-inline: 5px;
+    font-size: 12px;
+    width:150%;
+    margin-bottom: 40px;
+}
+.checkbox{
+    margin-right:10%;
+    width:89%;
+}
+.newmember{
+    margin-inline-start: 60%;
+}
+
+#error{
+ 
+    font-size: 11px;
+    color:rgb(138, 206, 202);
+    text-transform: capitalize;
+}
+
+
+
+}
+
+#error{
+    margin-bottom: 20px;
+    font-size: 11px;
+    color:rgb(138, 206, 202);
+    text-transform: capitalize;
+}
+
+#input::placeholder {
+    color: #9e9c9c;
+    font-weight: bold;
+}
+#input {
+
+    border: transparent;
+    border-bottom:3px dotted rgb(232, 217, 217);
+    opacity: 6;
+    font-size: 16px;
+    border-color: none;
+    border-radius: 2%;
+    color: rgb(209, 226, 240);
+    text-decoration:dotted;
+    align-items: center;
+   padding:10px;
+font-family: "latha,sans-serif";
+background-color: transparent;
+}
+
+button{
+    opacity: 6;
+    border-radius: 10%;
+    border: none;
+    align-items: center;
+    width: 85px;
+    height:40px;
+    font-family: "latha , sans-serif";
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 90%;
+background-color: transparent;
+font-weight: 90px;
+margin-top: 1vh;
+color:rgb(191, 201, 201);
+
+}

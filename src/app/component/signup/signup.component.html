@@ -1,0 +1,32 @@
+
+<div class="signup">
+    <!-- <i id="i" class="bi bi-arrow-left-circle-fill"></i> -->
+    <!-- <h1 id="signupTopic">Quick Kart</h1> -->
+    <h1>Signup Account</h1>
+  
+    <div class="body">
+        <form (ngSubmit)="onSubmit()" [formGroup]="registrationForm">
+             <input type="text" name="userName" [(ngModel)]="userName" formControlName="name" placeholder="Name"
+                class="input">
+            <input type="email" name="email" [(ngModel)]="email" formControlName="email" placeholder="Email Id"
+                class="input">
+            <input type="number" name="number" [(ngModel)]="number" formControlName="number" placeholder="Mobile Number"
+                class="input">
+            <input type="password" name="password" [(ngModel)]="password" formControlName="password"
+                placeholder="Passward" class="input">
+            <p id="error">{{showError}}</p>
+            <!-- <div class="spesific">
+             
+                    <div id="c">
+                    <input type="checkbox" name="" id="check">
+                    <p>Keep me signed in</p>
+                </div>
+               
+                <div>
+                <p id="a" (click)="moveToLogin()">Already a member?</p>
+            </div>
+        </div> -->
+            <button type="submit">SIGNUP</button>
+        </form>
+    </div>
+</div>

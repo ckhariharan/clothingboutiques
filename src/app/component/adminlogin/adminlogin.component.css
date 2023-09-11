@@ -1,0 +1,236 @@
+.adminlogin {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    flex-direction: column;
+    align-items: center;
+    
+background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)) ,url('/assets/images/admin/adminlogin.jpg') ;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    top:0;
+    left:0;
+}
+
+.content {
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    border-radius: 2vh;
+background-color: transparent;
+}
+
+#adminlogin{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .content2 {
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+/* background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)) ,url('src/assets/staffbackground1.jpg') ; */
+/* background-color: white;
+background-repeat: no-repeat;
+background-repeat: no-repeat;
+background-position: center;
+} */ 
+.profileIcon {
+    position: absolute;
+    top: -8vh;
+    width: 15vh;
+    height: 15vh;
+    background-color: #0D4979;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.adminlogin h1 {
+    font-size: 5vh;
+    font-weight: 400;
+    color: #d6cdcd;
+    margin:3vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+
+}
+.adminlogin h4 {
+    font-size: 5vh;
+    font-weight: 400;
+    color: #7a7979;
+    margin: 0;
+    
+}
+
+input::placeholder{
+    color:#7a7979;
+    font-size: 15px;
+}
+
+.adminlogin input{
+    width: 100%;
+    height: 3vh;
+    margin: 1vh;
+border:none;
+    border-left:solid#d6cdcd;;
+opacity: 0.2;
+
+font-weight: bold;
+    padding: 2vh;
+    border-radius: .5vh;
+
+}
+
+.adminlogin button {
+    width: 77%;
+    padding: 2vh;
+    border: none;
+    background-color: #0D4979;
+    color: #fff;
+    margin-top: 3vh;
+    margin-bottom: 2.5vh;
+    border-radius: .5vh;
+}
+.adminlogin button:hover {
+    background-color: #1869ac;
+}
+
+.adminlogin p {
+    color:#7a7979 ;
+}
+
+.adminlogin p span {
+    color: #0D4979;
+    cursor: pointer;
+}
+/* 
+#user_icon {
+    font-size: 7vh;
+    color:white;
+} */
+
+/* #adminLogo {
+    position: fixed;
+    top: 0;
+    left: 100vh;
+    font-size: 8vh;
+    color: #ceefdb;
+    font-weight: bold;
+  
+} */
+#backarrow{
+    position: fixed;
+    top: 20px;
+    left: 7vh;
+    font-size: 6vh;
+    background-color: transparent;
+
+    font-weight: bold;
+}
+
+#adminBackButton {
+    border-radius: 1vh;
+    position: fixed;
+    bottom: 0;
+    left: 5vh;
+    width: 15vh;
+    text-align: center;
+    height: 6vh;
+}
+
+#validationMessage {
+    color: red;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+i{
+    color: rgb(228, 210, 181);
+}
+
+.checkbox{
+    position: fixed;
+    display: flex;
+    width: 30%;
+  justify-content: left;
+  align-items: center;
+   color:aliceblue;
+   font-size: 10px;
+ 
+   text-transform: capitalize;
+   font-family: gothamfont;
+opacity: 9;
+margin-top:10vh;
+margin-left: 3%;
+}
+.checkbox input{
+    width:10%;
+    display: flex;
+    align-items: center;
+}
+.checkbox p{
+    width:40%;
+    margin-right: 60%;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+@media screen and (max-width:767px) {
+    .adminlogin{
+background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)) ,url('/assets/images/admin/adminphonelogin.jpg') ;
+
+    }
+    form{
+        width: 80%;
+    }
+    
+.checkbox{
+    position: fixed;
+    display: flex;
+    width: 60%;
+  justify-content: left;
+  align-items: center;
+   color:aliceblue;
+   font-size: 4px;
+   text-transform: capitalize;
+   font-family: gothamfont;
+opacity: 9;
+margin-top:10vh;
+margin-right: 28%;
+}
+.checkbox input{
+    width:7%;
+    display: flex;
+    align-items: left;
+}
+.checkbox p{
+    width:34%;
+    height: 3vh;
+    font-size: 8px;
+    margin-right: 3px;
+    
+
+}
+
+    
+}
+

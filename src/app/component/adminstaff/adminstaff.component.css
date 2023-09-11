@@ -1,0 +1,462 @@
+.nav{
+    background-color: rgb(222, 188, 18);
+    height:7vh;
+    width:100%;
+    justify-content: space-between;
+    display: flex;
+    position: sticky;
+    top: 0;
+  }
+  .leftnavbar{
+    margin-inline:20px;
+  }
+  .leftnavbar h5{
+    color:rgb(243, 223, 127);
+    text-transform: capitalize;
+    font-size: 13px;
+    margin-top: 2vh;
+  }
+    
+  .rightnavbar {
+    margin-inline: 20px;
+    justify-content: space-between;
+    display: flex;
+  padding: 1px;
+  margin-right: 10px;
+  
+  }
+  .rightnavbar input{
+    width: 160px;
+  margin-top: 6px;
+    height:18px;
+    margin-right: 20px;
+    color:Black;
+  font-weight: 400;
+  background-color:rgb(219, 207, 146);
+  border-color:rgb(205, 186, 95);  
+  
+  }
+  .rightnavbar button{
+    width:90px;
+    height:33px;
+  color:Black;
+  font-weight: 400;
+  background-color:rgb(219, 207, 146);
+  border-color:rgb(205, 186, 95);  
+  margin-top: 1px;
+  }
+  
+  .title{
+    background-color: rgb(217, 235, 235);
+    height:30vh;
+    display: flex;
+    justify-content: center;
+  
+  }
+  .title h2{
+  align-items: center;
+  display: flex;
+  font-size: 110px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  
+  }
+  .title p{
+    align-items: center;
+  display: flex;
+  margin-right: 10px;
+  margin-top:80px ;
+  margin-left: 0;
+  }
+  
+  .parent{
+    justify-content: space-between;
+    background-color: black;
+    display: flex;
+    width:100%;
+    height:80vh;
+  }
+  
+  .childleft{
+    background-color: rgb(183, 183, 221);
+    width:20%;
+    justify-content: center;
+    align-items: center;
+  flex-direction: column;
+  display: flex;
+  height:97vh;
+  
+  }
+  .childleft img{
+    height:150px;
+    width:150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  
+  }
+  
+  .childleft h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    display: flex;
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 18px;
+    padding-block: 10px;
+    background-color:rgb(245, 244, 244);
+    width:90%;
+    margin-left: 35px;
+    height: 20px;
+    border-radius: 10px;
+  }
+  .childleft h1:hover{
+    color: rgb(245, 244, 244);
+    
+  }
+  /* 
+  .childright{
+    background-color: rgb(245, 244, 244);
+    width:80%;
+    justify-content: space-between;
+    display: flex;
+  
+  } */
+  
+  .content {
+    width: 80%;
+    height: 75vh;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 244, 244);
+  }
+  /* 
+  .nav button,
+  #change {
+    padding-inline: 2vh;
+    padding-block: 2vh;
+    background-color: #1442e9;
+    color: #fff;
+    border: none;
+    border-radius: 1vh;
+  }
+  
+  .nav button:hover,
+  #change:hover {
+    background-color: #102a85;
+  }
+  
+  .nav h1 {
+    padding-block: 3vh;
+    color: aliceblue;
+  }
+  
+  .nav ul {
+    padding-block: 20vh;
+    color: aliceblue;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .nav ul li {
+    padding-block: 2.5vh;
+    font-size: 3vh;
+    padding-inline: 50vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .nav ul li:hover {
+    background-color: #1442e9;
+  }
+  
+  .nav ul li:nth-child(4) {
+    background-color: rgb(247, 251, 255);
+    color: #000;
+  }
+  
+  .nav ul li i {
+    padding-inline: 1vh;
+  } */
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  }
+  
+  .container .left {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+
+  }
+  
+  
+  select {
+    appearance: none;
+    outline: none;
+  }
+  
+  
+  .right {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .left * {
+    margin: 1vh;
+  }
+  
+  .content .container .left h1 {
+    margin-bottom: 3vh;
+  }
+  
+  .content .container .left input,#search,select {
+    padding: 2.5vh;
+    border: none;
+    background-color: #d9e0f8;
+    border-radius: 1vh;
+  }
+  
+  .content .container .left button {
+    padding-inline: 7vh;
+    border-radius: 1vh;
+    padding-block: 2vh;
+    background-color: #191a1e;
+    border: none;
+    color: #ffF;
+  }
+  
+  button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  
+  .right table {
+    width: 100%;
+    margin-top:5vh;
+    border: none;
+  }
+  
+  .right table th, .right table td {
+    padding: 2vh
+  } 
+  
+  .right table th {
+    text-align: center;
+    font-size: 1.8vh;
+  }
+  
+  .right table td{
+    text-align: center;
+    font-weight:100 !important;
+    font-size: 1.9vh;
+  }
+  
+  .table-container {
+    max-height: 100vh; 
+    overflow-y: auto;
+    width: 100%;
+  }
+  
+  thead {
+    background-color:#e8eaf3;
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: none;
+  }
+  
+  tr {
+    border-radius: 50%;
+    margin-block: 5vh;
+  }
+  
+  tbody {
+    border: 1px solid #9ba0c97a;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height:80vh;
+  }
+  
+  .diolog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 60vh; 
+    border-radius: 10px;
+    background-color: #e0e0e0; 
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .diolog .name {
+    background-color: #102a85;
+    width: 100%;
+    height: 20vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .diolog .name h1 {
+    color: #fff;
+  }
+  
+  .diolog .details {
+    background-color: #e0e0e0; 
+    width: 100%;
+    height: 60vh;
+    display: flex;
+  }
+  
+  .diolog .details .rightdiolog {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .diolog .details .leftleftdiolog {
+    width: 50%;
+    height: 100%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  
+  h5{
+    margin: 1vh;
+    font-size: 4vh;
+  }
+  
+  .actions {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .actions button {
+    border: none;
+    padding-inline: 2.5vh;
+    padding-block: 1.5vh;
+    margin: 2vh;
+    border-radius: 1vh;
+    background-color:#102a85;
+    color: #fff;
+  }
+  
+  .diolog form {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .leftleftdiolog input, .name input{
+   background: none;
+   margin: 1vh;
+   font-size: 4vh;
+   border: none;
+   padding: none;
+  }
+  
+  .name input{
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+  }
+  
+  .blinking-cursor {
+    position: relative;
+    outline: none;
+  }
+  
+  .blinking-cursor::after {
+    content: '|';
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: visible;
+    animation: blinking-animation 1s step-end infinite;
+  }
+  
+  @keyframes blinking-animation {
+    from, to {
+      visibility: hidden;
+    }
+    50% {
+      visibility: visible;
+    }
+  }
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top-color: #000;
+    animation: spin 1s ease-in-out infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  .cancelButton {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: red !important;
+  font-size: 4vh !important;
+  padding: 0 !important;
+  }
+  
+  #negative {
+  background-color: red !important;
+  }
+  
+  #positive {
+  background-color: #102a85 !important;
+  }
+  
+  #search {
+  width: 80%;
+  margin: 5vh;
+  }

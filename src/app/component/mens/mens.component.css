@@ -1,0 +1,82 @@
+/* overlay.component.css
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  } */
+
+  .container{
+background-color: red;
+height: 100vh;
+width:100%;
+
+
+align-items: center;
+display: flex;
+justify-content: center; 
+position: fixed;
+top: 0;
+left: 0;
+  }
+
+  .body{
+
+height: 80vh;
+width: 80%;
+    background-color: green;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+.left{
+  height:80vh;
+  width:80%;
+  background-color: white;
+  opacity: 0.9;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.lefttop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+input{
+width: 30%;
+padding: 10px;   
+margin:10px;
+}
+.right{
+  height:80vh;
+  width:80%;
+  background-color: white;
+  
+  opacity: 0.7;
+}

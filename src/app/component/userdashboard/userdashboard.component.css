@@ -1,0 +1,966 @@
+.nav {
+  background-color: rgb(222, 188, 18);
+  height: 7vh;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  position: sticky;
+  top:0;
+  z-index: 200;
+}
+
+.leftnavbar {
+  margin-inline: 20px;
+}
+
+.leftnavbar h5 {
+  color: rgb(243, 223, 127);
+  text-transform: capitalize;
+  font-size: 13px;
+  margin-top: 2vh;
+}
+
+.rightnavbar button{
+  width:90px;
+  height:33px;
+color:Black;
+font-weight: 400;
+background-color:rgb(219, 207, 146);
+border-color:rgb(205, 186, 95);  
+margin-top: 1px;
+}
+
+.rightnavbar:hover button{
+  
+    transform: scale(0.9);
+  
+}
+
+
+#title {
+  background-color: rgb(217, 235, 235);
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+
+}
+
+#title h1{
+  align-items: center;
+  display: flex;
+  font-size: 100px;
+  font-weight: 200;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#title p{
+  align-items: center;
+  display: flex;
+  margin-right: 10px;
+  margin-top: 50px;
+  margin-left: 0;
+}
+
+.carousel-container {
+  width: 100%;
+  /* Adjust the width as needed */
+  overflow: hidden;
+  height: 84vh;
+  position: relative;
+  background-color: gray;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide.active {
+  display: block;
+  animation: slideIn 1s;
+}
+
+.carousel-slide img {
+  width: 98%;
+  height: 80vh;
+  margin-top: 10px;
+  margin-left:1%;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.products {
+  width: 100%;
+  /* height: 100vh; */
+  background-color: rgb(225, 222, 222);
+
+  color: #000;
+}
+
+.products-container {
+  width: 100%;
+  /* max-height: 80vh; */
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products-container .card {
+  width: 25%;
+  height: 25vh;
+  border: 1px solid #ccc;
+  display: flex;
+  margin: 2vh;
+}
+
+.image {
+  height: 100%;
+  width: 43%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 80%;
+  height: 80%;
+}
+
+.details {
+  position: fixed;
+  z-index: 1000;
+  top: 5vh;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  width: 50%;
+  height: 80vh;
+}
+
+.details .cancelButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 3vh;
+}
+
+.cancelButton button {
+  padding: 1vh;
+  color: red;
+  font-size: 4vh;
+  border: none;
+  background: none;
+}
+
+.details .left {
+  width: 50%;
+  height: 100%;
+}
+
+.details .left .image {
+  width: 100%;
+  height: 65%;
+  background-color: #fff;
+}
+
+.details .left .image img {
+  width: 80%;
+  height: 80%;
+}
+
+.details .left .buttons {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.details .left .buttons button {
+  padding-inline: 2vh;
+  width: 50%;
+  height: 20%;
+  border-radius: 1vh;
+  margin: 2vh;
+  background-color: #0D6EFD;
+  color: #fff;
+  border: none;
+}
+
+.details .right {
+  width: 50%;
+  height: 100%;
+}
+
+.details .title {
+  height: 35%;
+  width: 100%;
+  background-color: #fff;
+}
+
+.details .right .title h1 {
+  margin-top: 2vh;
+}
+
+.details .right .title p {
+  margin: 1vh;
+}
+
+.details .right .title h2 {
+  color: rgb(253, 53, 53);
+}
+
+.details .right .title h5 {
+  padding: 1vh;
+  color: green;
+}
+
+.details .right .review {
+  height: 60%;
+  width: 100%;
+  border: 1px solid #9191918f;
+  border-radius: 2vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.details .right .review .textbox {
+  width: 95%;
+  height: 5vh;
+  border-radius: 1vh;
+  border: 1px solid #9191918f;
+  position: absolute;
+  bottom: 8px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.details .right .review .textbox input {
+  height: 95%;
+  width: 88%;
+  border: none;
+  margin: 1vh;
+}
+
+.details .right .review .textbox i {
+  font: 3vh;
+  color: green;
+}
+
+.details .right .review .content {
+  width: 100%;
+  max-height: 85%;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.details .right .review .content .card {
+  border-bottom: 1px solid #9191918f;
+}
+
+.payment {
+  position: fixed;
+  z-index: 1000;
+  top: 5vh;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  height: 80vh;
+}
+
+.payment .title {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment .title h2 {
+  color: #0b52bd;
+}
+
+.payment .textFields {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #eee;
+}
+
+.payment .textFields form {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment .textFields form input {
+  padding: 2vh;
+  width: 50%;
+  margin: 1vh;
+  border-radius: 1vh;
+  border: none;
+  border: 1px solid #aaaaaa;
+}
+
+.payment .textFields .amount {
+  width: 40%;
+  height: 100%;
+  padding-right: 2vh;
+}
+
+.payment .textFields .amount .detail {
+  width: 100%;
+  height: 68%;
+  margin-top: 10%;
+  justify-content: space-between;
+  display: flex;
+
+}
+
+.payment .textFields .amount .detail .productPrice p {
+  text-align: right;
+}
+
+.payment .textFields .amount .total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment .actions {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #eee;
+}
+
+.payment .actions button {
+  padding-inline: 2vh;
+  width: 25%;
+  height: 45%;
+  border-radius: 1vh;
+  margin: 2vh;
+  background-color: #0b52bd;
+  color: #fff;
+  border: none;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control button {
+  padding-inline: 2vh;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.quantity,
+.total {
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid #b0b9bb;
+}
+
+.total {
+  margin-block: 2vh;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top-color: #000;
+  animation: spin 1s ease-in-out infinite;
+  margin: 0 auto;
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.advertisement{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  background-color:  rgb(225, 222, 222);
+  flex-direction: column;
+  
+  }
+  .startad{
+    display: flex;
+    height:90vh;
+    width:100%;
+  background-image: linear-gradient(rgba(3, 2, 2, 0.3), rgba(6, 4, 4, 0.6)),url('/assets/images/staff/staffcreatebgs.jpg');
+  background-size: cover;
+opacity: 0.7;
+border-radius: 5%;
+  }
+.leftad{
+  width:50%;
+  padding:30px;
+display: flex;
+color: wheat;
+margin-top: 6%;
+margin-left: 8%;
+flex-direction: column;
+align-items: center;
+ /* background-image: linear-gradient(rgba(3, 2, 2, 0.3), rgba(6, 4, 4, 0.6)),url('/assets/images/staff/staffcreatebgs.jpg');
+background-repeat: no-repeat; */
+background-color: #000;
+mix-blend-mode: screen!important;
+}
+.leftad h1{
+  font-family: 'Quicksand',Helvetica,Arial,Lucida,sans-serif !important;
+  font-size:50px;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+.leftad p{
+  font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif !important;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.leftad h1,.leftad p,.leftad h2{
+  margin: 2%;
+}
+
+
+.rightad{
+  width:50%;
+  padding:30px;
+  color: wheat;
+  margin-top: 6%;
+  margin-right: 4%;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #000;
+  mix-blend-mode: screen!important;
+}
+.rightad h1{
+  font-family: 'Quicksand',Helvetica,Arial,Lucida,sans-serif !important;
+  font-size:50px;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+.rightad p{
+  font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif !important;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.rightad h1,.rightad h2{
+  margin: 2%;
+}
+
+
+.about{
+  background-color:rgb(39, 38, 38);
+  color: wheat;
+  justify-content: center;
+  display: flex;
+  font-size: 10px;
+  padding: 1%;
+}
+
+
+.btn1{
+  width:100%;
+  height:30vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(225, 222, 222);
+
+}
+
+
+#btn1{
+  margin-top: 2%;
+  height:90px;
+  width:100px;
+  display: flex;
+  border-radius: 40%;
+  margin: 9%;
+}
+#margin{
+  margin-inline: 9%;
+  margin-top: 2%;
+}
+
+#btn1:hover{
+  transform: scale(1.2);
+}
+
+
+@media screen and (max-width: 767px) {
+
+
+
+.carousel-container{
+  height: 50vh;
+
+}
+.carousel-slide img {
+ 
+  height: 47.5vh;
+}
+
+  .dashboard .titlebar {
+      height: 8vh;
+      align-items: center;
+  }
+
+  .dashboard .titlebar {
+      padding-inline: 0.5vh;
+  }
+
+  .titlebar h1 {
+      font-size: 3vh;
+  }
+
+  .dashboard .titlebar .right .supportAndAccount1 {
+      display: none;
+  }
+
+  .dashboard .titlebar .right .supportAndAccount2 .text {
+      display: none;
+  }
+
+  .dashboard .titlebar .right .supportAndAccount2 .icon i {
+      background-color: #5e4228;
+      color: #fff;
+  }
+
+  .dashboard .titlebar .right .supportAndAccount2 {
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+  }
+
+  .dashboard .titlebar .right {
+      justify-content: flex-end;
+  }
+
+  .dashboard .searchBar #refresh {
+      padding-inline: 0vh;
+  }
+
+  .searchBar button,
+  .searchBar i,
+  .searchBar p {
+      display: none;
+  }
+
+  select {
+      font-size: 1.5vh;
+      margin-right: 0.5vh;
+      margin-left: 0.5vh;
+  }
+
+  .searchBar input {
+      padding: 1vh;
+      padding-inline: 3.5vh;
+      width: 60%;
+      border: none;
+      border-radius: 0.5vh;
+  }
+
+  .dashboard .searchBar {
+      height: 5vh;
+  }
+
+  .slider-container {
+      height: 20vh;
+  }
+
+  .slider-wrapper .slider-slide {
+      height: 20vh;
+  }
+
+  .slider-button {
+      width: 1vh;
+      height: 1vh;
+      font-size: 2vh;
+  }
+
+  .left {
+      left: 1vh;
+  }
+
+  .right {
+      right: 1vh;
+  }
+  .btn1{
+    height:15vh;
+  }
+
+  #btn1{
+    height:50px;
+    width:55px;
+    display: flex;
+    border-radius: 20%;
+    margin: 2%;
+    font-size: 13px;
+  }
+
+  #margin{
+    margin-inline: 8%;
+  }
+
+
+  /* .products {
+      height: 100vh;
+  } */
+
+  /* .products-container {
+      margin-top: 2vh;
+  } */
+
+  .products-container .card {
+      width: 95%;
+      height: 20vh;
+      
+      margin: 1vh;
+  }
+
+  .image {
+      height: 100%;
+      width: 43%;
+  }
+
+  .details {
+      position: fixed;
+      z-index: 1000;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 2vh;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      width: 90%;
+      height: 40vh;
+  }
+
+  .details .cancelButton {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 1vh;
+  }
+
+  .cancelButton button {
+      padding: 1vh;
+      color: red;
+      font-size: 3vh;
+      border: none;
+      background: none;
+  }
+
+  .details .left .image {
+      width: 100%;
+      height: 60%;
+      background-color: #fff;
+  }
+
+
+  .details .left .buttons {
+      width: 100%;
+      height: 35%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+
+
+  .details .left .buttons button {
+      padding-inline: 4vh;
+      width: 66%;
+      height: 30%;
+      border-radius: 1vh;
+      margin: 1vh;
+      background-color: #0D6EFD;
+      color: #fff;
+      border: none;
+  }
+
+  .details .right .title h1 {
+      margin-top: 1vh;
+      font-size: 2.5vh;
+  }
+
+  .details .right .title p {
+      margin: 0.2vh;
+      font-size: 1.5vh;
+  }
+
+  .details .right .title h2 {
+      color: rgb(253, 53, 53);
+      font-size: 2vh;
+
+  }
+
+  .details .right .title h5 {
+      padding: 1vh;
+      color: green;
+      font-size: 1.5vh;
+  }
+
+  .details .right .review {
+      height: 60%;
+      width: 100%;
+      border: 1px solid #9191918f;
+      border-radius: 2vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+  }
+
+  .details .right .review .textbox {
+      width: 95%;
+      height: 4vh;
+      border-radius: 1vh;
+      border: 1px solid #9191918f;
+      position: absolute;
+      bottom: 8px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+  }
+
+  .details .right .review .textbox input {
+      height: 95%;
+      width: 80%;
+      border: none;
+      margin: 1vh;
+  }
+
+  .details .right .review h1 {
+      font-size: 1.5vh;
+  }
+
+  .details .right .review .textbox i {
+      font: 2vh;
+      color: green;
+  }
+
+  .details .right .review .content {
+      width: 100%;
+      max-height: 85%;
+      padding: 15px;
+      overflow-y: auto;
+  }
+
+  .details .right .review .content .card {
+      border-bottom: 1px solid #9191918f;
+  }
+
+  .payment {
+      position: fixed;
+      z-index: 1000;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      height: 40vh;
+  }
+
+  .payment .title {
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .payment .title h2 {
+      color: #0b52bd;
+      font-size: 2.5vh;
+  }
+
+  .payment .textFields {
+      width: 100%;
+      height: 75%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid #eee;
+  }
+
+  .payment .textFields form {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .payment .textFields form input {
+      padding: 1vh;
+      width: 70%;
+      margin: 1vh;
+      border-radius: 1vh;
+      border: none;
+      border: 1px solid #aaaaaa;
+  }
+
+  .payment .textFields .amount {
+      width: 40%;
+      height: 100%;
+      padding-right: 2vh;
+  }
+
+  .payment .textFields .amount .detail .productPrice p {
+      text-align: right;
+      font-size: 1vh;
+  }
+
+  .payment .textFields .amount .detail .productName p {
+      font-size: 1vh;
+  }
+
+  .payment .actions {
+      width: 100%;
+      height: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid #eee;
+  }
+
+  .payment .actions button {
+      padding-inline: 1vh;
+      width: 30%;
+      height: 5vh;
+      border-radius: 1vh;
+      margin: 2vh;
+      background-color: #0b52bd;
+      color: #fff;
+      border: none;
+  }
+
+  .quantity h3,
+  .quantity span {
+      font-size: 1.5vh;
+  }
+
+  .quantity-control {
+      display: flex;
+      align-items: center;
+  }
+
+  .quantity-control button {
+      padding-inline: 1vh;  
+      font-size: 2vh;
+      cursor: pointer;
+  }
+
+  .textFields form p, #paymentError{
+      font-size: 1.4vh;
+  }
+
+  .quantity,
+  .total {
+      margin: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 10%;
+      border-bottom: 1px solid #b0b9bb;
+  }
+
+  .total {
+      margin-block: 1vh;
+  }
+
+  .amount .total h3{
+      font-size: 1.5vh;
+  }
+ 
+  .advertisement{
+    height: 120vh;
+  }
+
+  .startad{
+    display: flex;
+    flex-direction: column;
+    height:150vh;
+    width:100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),url('/assets/images/user/footerimg.jpg');
+border-radius: 1px;
+border:dashed ;
+
+  }
+
+  .leftad{
+    width:80%;
+    margin-top: 20%;
+background-color: none;
+    padding:10px;
+  }
+  .leftad h1{
+    display: flex;
+    margin-left: 10%;
+    
+  }
+  .leftad #p{
+    font-size: 12px;
+    margin-right: 6%;
+
+
+  }
+  .rightad{
+    background-color: none;
+    width:94%;
+    padding:10px;
+  }
+
+
+}
