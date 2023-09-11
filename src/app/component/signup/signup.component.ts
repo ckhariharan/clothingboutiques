@@ -76,7 +76,7 @@ export class SignupComponent implements OnInit {
       this.showError = "Please enter Name";
     } else if (this.email === "") {
       this.showError = "Please enter Email";
-    } else if !((/^[^\s@]+@[^\s@]+\.[^\s@]+$/).test(this.email)) {
+    } else if (!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/).test(this.email)) {
       this.showError = "Invalid Email";
     } else if (this.number === "") {
       this.showError = "Please enter your Mobile No";
