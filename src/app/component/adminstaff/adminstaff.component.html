@@ -5,7 +5,7 @@
 
     </div>
     <div class="rightnavbar">
-        <!-- <input type="text" [(ngModel)]="searchTerm" placeholder=" 🔎︎ search" (keyup)="searchEmployees()"> -->
+      
 
         <button (click)="logout()"> logout</button>
 
@@ -28,7 +28,7 @@
 <div class="parent">
     <div class="childleft">
         
-        <img src="/assets/images/admin/db.jpg">
+        <img src="/assets/images/admin/db.jpg" alt="#">
         <h1 style="background-color:rgb(183, 183, 221);" (click)="admindashboard()"> <i style="font-size:large;"
                 class="bi bi-house-door-fill"></i>&nbsp;&nbsp; Home</h1><br>
         <h1 style="color: black;" (click)="adminstaff()"><i style="font-size:large;"
@@ -86,7 +86,7 @@
                 <P style="color: red;">{{showError}}</P>
 
                     <div>
-                        <!-- <button style="background-color: rgb(255, 38, 0);" (click)="resetFormFields()">Reset</button> -->
+                    
                         <button  type="submit"  *ngIf="!isloading">Add</button>
 
                     </div>
@@ -96,32 +96,7 @@
                 </form>
 
             </div>
-            <!-- <div class="right">
-
-                <div class="table-container">
-                    <table>
-                        <caption>Employee Table</caption>
-                        <thead>
-                            <tr>
-                                <th>E-ID</th>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody style="margin-top: 15px;" *ngFor="let employee of EmployeeList">
-                            <td>{{employee.EID}}</td>
-                            <td>{{employee.Name}}</td>
-                            <td>{{employee.Phone}}</td>
-                            <td><button style="font-size: 4vh; background: none ; border: none; color: #1442e9;"
-                                    (click)="toggleDialog(employee);  editAction(employee);">
-                                    <i class="bi bi-credit-card-2-front"></i>
-                                </button>
-                            </td>
-                        </tbody>
-                    </table>
-                </div>
-            </div> -->
+         
         </div>
         <div class="diolog" *ngIf="showDialog">
             <form [formGroup]="updateEmployeeForm">
