@@ -1,5 +1,5 @@
 <div class="staff">
-    <!-- <div class="nav" *ngFor="let employee of EmployeeList">
+   
         <h2 style="padding-inline: 5% ;">
             Hey! {{employee.Gender === 'male' ? 'Mr.' : 'Mrs.'}}{{employee.Name}}
         </h2>
@@ -17,7 +17,7 @@
             <h5>Free shipping on all orders $75+</h5>
         </div>
         <div class="rightnavbar" >
-            <!-- <input type="text" [(ngModel)]="Search" placeholder="..search" (keyup)="search()"> -->
+          
             <input type="text" placeholder=" 🔎︎   Search Product" [(ngModel)]="searchTerm" (keyup)="searchEmployees()">
 
             <button id="logout" (click)="logout()"> logout</button>
@@ -51,7 +51,7 @@
                 <input type="number" placeholder="stock" name="Stock" [(ngModel)]="Stock" formControlName="Stock">
                 <p style="color: red;padding-bottom: 3vh;">{{showError}}</p>
                 <div style="display: flex; width: 100%; justify-content: center;">
-                <!-- <button (click)="resetFormFields()" *ngIf="!showEditButton" style="margin-right: 2vh; background-color: red;">Reset</button> -->
+                
                 <button type="submit" *ngIf="!showEditButton" style="background-color:azure;color: black;">Add</button>
                 <button  (click)="updateData(); this.showEditButton = false; this.resetFormFields()" *ngIf="showEditButton" style="margin-right: 2vh;">Update</button>
                 <button (click)="this.showEditButton = false; resetFormFields()" *ngIf="showEditButton" style="background-color: red;">Cancel</button>
@@ -60,7 +60,7 @@
         </div>
         <div class="left">
             <div class="table-container">
-                <table>
+                <table summary="product-entry">
                     <thead>
                         <tr>
                             <th>P-ID</th>
