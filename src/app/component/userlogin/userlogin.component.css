@@ -41,7 +41,7 @@
     font-weight: 600;
     border-bottom: 2px dotted;
     color: rgb(196, 241, 226);
-    font-family: Gotham;
+    font-family: Gotham,sans-serif;
 }
 
 
@@ -156,7 +156,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !importan
     text-decoration:dotted;
     align-items: center;
    padding:10px;
-font-family: "latha,sans-serif";
+font-family: latha,sans-serif;
 background-color: transparent;
 }
 
@@ -167,10 +167,9 @@ button{
     align-items: center;
     width: 85px;
     height:40px;
-    font-family: "latha , sans-serif";
+    font-family: latha , sans-serif;
     text-decoration: none;
     text-transform: capitalize;
-    font-weight: bold;
     font-size: 90%;
 background-color: transparent;
 font-weight: 90px;
