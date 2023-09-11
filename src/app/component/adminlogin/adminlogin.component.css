@@ -82,7 +82,7 @@ input::placeholder{
     height: 3vh;
     margin: 1vh;
 border:none;
-    border-left:solid#d6cdcd;;
+    border-left:solid#d6cdcd;
 opacity: 0.2;
 
 font-weight: bold;
@@ -174,7 +174,7 @@ i{
    font-size: 10px;
  
    text-transform: capitalize;
-   font-family: gothamfont;
+   font-family: gothamfont,sans-serif;
 opacity: 9;
 margin-top:10vh;
 margin-left: 3%;
@@ -211,7 +211,7 @@ background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)) ,url('/
    color:aliceblue;
    font-size: 4px;
    text-transform: capitalize;
-   font-family: gothamfont;
+   font-family: gothamfont,sans-serif;
 opacity: 9;
 margin-top:10vh;
 margin-right: 28%;
