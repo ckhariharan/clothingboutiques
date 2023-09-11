@@ -29,7 +29,7 @@
     /* Prevent text from wrapping */
     animation: moveRightToLeft 10s infinite;
     /* Adjust duration and timing function as needed */
-    font-family: "latha,sans-serif";
+    font-family: latha,sans-serif;
 
     text-transform: capitalize;
 }
