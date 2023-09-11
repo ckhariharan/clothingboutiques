@@ -155,13 +155,17 @@ img {
         align-items: center;
         width: 40px;
         height: 40px;
-        font-family: "latha , sans-serif";
+        font-family: latha , sans-serif;
         text-decoration: none;
         text-transform: capitalize;
         font-weight: bold;
         font-size: 10px;
     }
 
+}
+
+.pop-element {
+    animation: pop 1s ease-in-out infinite;
 }
 
 /* Keyframes for the pop animation */
@@ -180,9 +184,7 @@ img {
 }
 
 /* Apply the animation to an element with the class 'pop-element' */
-.pop-element {
-    animation: pop 1s ease-in-out infinite;
-}
+
 
 /*
   @keyframes openImage {
