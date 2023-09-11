@@ -1,7 +1,7 @@
 export const firebaseConfig = {
     production : false,
     firebase : {
-        apiKey: "AIzaSyAOFm98JLvxqJIDgRU55xpEm_IvxF4GaOs",
+        apiKey: "xxx-xxx-xxx",
         authDomain: "clothingboutiques-98562.firebaseapp.com",
         projectId: "clothingboutiques-98562",
         storageBucket: "clothingboutiques-98562.appspot.com",
