@@ -513,12 +513,12 @@ background-color: #000;
 
 
 #btn1{
+  margin: 9%;
   margin-top: 2%;
   height:90px;
   width:100px;
   display: flex;
   border-radius: 40%;
-  margin: 9%;
 }
 #margin{
   margin-inline: 9%;
