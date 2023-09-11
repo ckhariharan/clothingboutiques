@@ -36,7 +36,7 @@
             <div class="right"><br>
 <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  !important; font-size: 4vh;">Staff details</h1>
                 <div class="table-container" >
-                    <table summary='emp-registration'>
+                    <table >
                         <thead>
                             <tr>
                                 <th>E-ID</th>
@@ -59,32 +59,7 @@
                 </div>
             </div>
         </div>
-        
-<!-- 
-        <div class="table-container1" >
-            <table>
-                <tbody *ngFor="let Data of deliveryData">
-                    <td>DERY01</td>
-                    <td style="max-width: 10%; text-align: left;">
-                        {{Data.userName}}<br>
-                        {{Data.phoneNo}}<br>
-                        {{Data.Address}}
-                    </td>
-                    <td>
-                        {{Data.productName}}
-                    </td>
-                    <td>
-                        {{Data.PID}}
-                    </td>
-                    <td>{{Data.productPrice}}</td>
-                    <td>X {{Data.quantity}}</td>
-                    <td>
-                        {{Data.grandTotal}} <br>
-                    </td>
-                </tbody>
-            </table>
-        </div> -->
-
+     
 
         <div class="diolog" *ngIf="showDialog">
             <form [formGroup]="updateEmployeeForm">
