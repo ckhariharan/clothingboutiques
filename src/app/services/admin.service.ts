@@ -14,7 +14,7 @@ export class AdminService {
 
   constructor(private http: HttpClient) { }
 
-private EmployeeUrl = 'https://clothingbotiquesdb.onrender.com/employee';   //employee
+private EmployeeUrl = 'https://clothingbotiquesdb.onrender.com/employee';  
 
 
 postEmployeeData(data: employee): Observable<employee> {
