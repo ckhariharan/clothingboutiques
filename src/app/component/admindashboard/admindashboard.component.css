@@ -251,7 +251,7 @@ form {
   height: 60vh; 
   border-radius: 10px;
   background-color: #e0e0e0; 
-  /* box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff; */
+  
   display: flex;
   flex-direction: column;
 }
