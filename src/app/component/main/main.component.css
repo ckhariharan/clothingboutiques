@@ -42,7 +42,7 @@ button {
     align-items: center;
     width: 70px;
     height: 70px;
-    font-family: "latha , sans-serif";
+    font-family: latha , sans-serif;
     text-decoration: none;
     text-transform: capitalize;
     font-weight: bold;
