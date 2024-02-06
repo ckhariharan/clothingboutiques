@@ -46,6 +46,12 @@
 
 </div>
 
+
+
+
+
+
+
 <div class="products" >
     <div class="products-container"  *ngIf="!isloading" >
         <div class="card" *ngFor="let product of filteredProducts" (click)="openProduct(product)">
@@ -99,7 +105,7 @@
         <div class="image">
             <img src="{{diologData.imgUrl}}" alt="productImg">
         </div>
-
+ 
         <div class="buttons" *ngIf="diologData.Stock > 0">
             <button (click)=" openProductDiolog = false; openPaymentDiolog = true" style="z-index: 10000;">Buy<i
                     class="bi bi-cart4"></i></button>

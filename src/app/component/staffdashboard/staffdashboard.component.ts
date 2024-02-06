@@ -6,6 +6,8 @@ import { AdminService } from 'src/app/services/admin.service';
 import { ProductService } from 'src/app/services/product.service';
 import Swal from 'sweetalert2';
 import { Title } from '@angular/platform-browser';
+import {AngularFireAnalytics} from '@angular/fire/compat/analytics';
+
 
 export class employee {
   id!: any;
@@ -76,6 +78,7 @@ export class StaffdashboardComponent  implements OnInit {
     private formBuilder: FormBuilder,
     public productService: ProductService,
     private title:Title,
+    private analytics:AngularFireAnalytics,
 ) { }
 
 
@@ -132,6 +135,9 @@ getProduct(): void {
   this.productService.getProductByCatogory(this.category)
     .subscribe(data => {
       console.log(data);
+      const eventparams = {page:'staffdashboard',Name: `${data[0].Name}`,PID: `${data[0].  PID}`,ImageUrl: `${data[0].imgUrl}`,Price:`${data[0].Price}`,OriginalPrice:`${data[0].OriginalPrice}`,Offer:`${data[0].Offer}`,Stock:`${data[0].Offer}`,category:`${data[0].catogory}`,};
+      this.analytics.logEvent('stafflogged',eventparams);
+      console.log(`Event 'button_click' stafflogged with parameters`,eventparams);
       this.ProductList = data;
       this.getLastEID();
     });
@@ -178,7 +184,7 @@ updateData() {
 editAction(product: any) {
   this.createProductForm.patchValue(product);
   this.showEditButton = true;
-}
+} 
 
 getLastEID() {
   if (this.ProductList.length > 0) {
