@@ -1,12 +1,19 @@
 .nav {
   background-color: rgb(222, 188, 18);
-  height: 7vh;
+  height: 12vh;
   width: 100%;
   justify-content: space-between;
   display: flex;
   position: sticky;
   top:0;
   z-index: 200;
+}
+
+.rightnavbar{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .leftnavbar {
@@ -17,10 +24,10 @@
   color: rgb(243, 223, 127);
   text-transform: capitalize;
   font-size: 13px;
-  margin-top: 2vh;
+  margin-top: 5vh;
 }
 
-.rightnavbar button{
+/* .rightnavbar button{
   width:90px;
   height:33px;
 color:Black;
@@ -28,13 +35,148 @@ font-weight: 400;
 background-color:rgb(219, 207, 146);
 border-color:rgb(205, 186, 95);  
 margin-top: 1px;
-}
+} */
 
-.rightnavbar:hover button{
+#img:hover img{
   
     transform: scale(0.9);
   
 }
+
+#profilebackground{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the color and transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+align-items: center;
+display: flex;
+justify-content: center;
+  
+}
+#img{
+  height: 1vh;
+  width: 5vw;
+  margin-top: 1vh;
+  margin-right: 2vw;
+}
+#img img{
+  border-radius: 50%;
+height: 10vh;
+width: 5vw;
+}
+
+.profilebody{
+  height: 60vh;
+  width: 60vh;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the color and transparency */
+  box-shadow: 3px 3px 10px #00000065, -2px -2px 10px #fff;
+
+  align-items: center;
+  /* justify-content: center; */
+  opacity: 7;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2vh;
+} 
+.profileheader{
+  height: 15vh;
+  width: 60vh;
+  /* background-color: white; */
+  border-radius: 2vh;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+
+  /* box-shadow: 3px 3px 10px #00000065, -2px -2px 10px #fff; */
+
+/* overflow: hidden; */
+
+}
+.profilepict{
+  /* background-color: red; */
+  height: 9vh;
+  width: 10vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  right: 6vh;
+  top: 1.5vh;
+}
+.profilepict i{
+  font-size: 6vh;
+  color: white;
+}
+.profilepict1{
+  /* background-color: red; */
+  height: 12vh;
+  width: 7vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.profilepict1 i{
+  /* font-size: 8vh; */
+  color: white;
+}
+#profiledetail{
+  /* background-color: green; */
+  margin-top: 4vh;
+  height:40vh ;
+  width: 60vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+#p{
+  line-height: 4vh;
+}
+
+#b{
+  border: none;
+  padding: 2vh;
+  margin: 2vh;
+  box-shadow: 3px 3px 10px #00000065, -2px -2px 10px #fff;
+border-radius: 1vh;
+  font-family: Gotham !important;
+  background-color: red;
+  color: white;
+  outline: none;
+}
+
+.profileradius{
+  height: 16vh;
+  width: 17vh;
+  background-color: rgb(23, 23, 22);
+  box-shadow: 3px 3px 10px #00000065, -2px -2px 10px #fff;
+border-color: 3px 3px 10px #00000065, -2px -2px 10px #fff ;
+  border-radius: 50%;
+  position: absolute;
+  top: 26vh;
+  left: 46vw;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#cancel{
+  position: absolute;
+  top: 17vh;
+  right: 36vw;
+  padding: 5px;
+border-radius: 1vh;
+  border: none;
+  background: white;
+  color: red ;
+}
+#profilebackground i{
+  font-size: 4vh;
+}
+
 
 
 #title {
@@ -532,6 +674,152 @@ background-color: #000;
 
 @media screen and (max-width: 767px) {
 
+  .nav {
+    height: 8vh;
+
+  }
+
+  .leftnavbar h5 {
+
+    font-size: 11px;
+    margin-top: 3vh;
+  }
+  
+  /* .rightnavbar button{
+    width:90px;
+    height:33px;
+  color:Black;
+  font-weight: 400;
+  background-color:rgb(219, 207, 146);
+  border-color:rgb(205, 186, 95);  
+  margin-top: 1px;
+  } */
+  
+  #img:hover img{
+    
+      transform: scale(0.9);
+    
+  }
+  
+  #profilebackground{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the color and transparency */
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+    
+  }
+  #img{
+    height: 1vh;
+    width: 5vw;
+    margin-top: 1vh;
+    margin-right: 7vw;
+  }
+  #img img{
+    border-radius: 50%;
+  height: 6vh;
+  width: 10vw;
+  }
+  
+  .profilebody{
+    height: 60vh;
+    width: 85vw;
+
+  } 
+  .profileheader{
+    height: 15vh;
+    width: 60vh;
+    /* background-color: white; */
+    border-radius: 2vh;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+  
+    /* box-shadow: 3px 3px 10px #00000065, -2px -2px 10px #fff; */
+  
+  /* overflow: hidden; */
+  
+  }
+  
+  .profileradius{
+    height: 13vh;
+    width: 14vh;
+    background-color: rgb(23, 23, 22);
+    box-shadow: 3px 3px 10px #00000065, -2px -2px 10px #fff;
+  border-color: 3px 3px 10px #00000065, -2px -2px 10px #fff ;
+    border-radius: 50%;
+    position: absolute;
+    top: 26vh;
+    left: 39vw;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  #profiledetail{
+    /* background-color: green; */
+    margin-top: 2vh;
+    height:40vh ;
+    width: 60vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  .profilepict{
+    /* background-color: red; */
+    height: 7vh;
+    width: 5vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+  }
+  .profilepict1 i{
+    font-size: 4vh;
+    color: white;
+  }
+
+  .profilepict i{
+    font-size: 4vh;
+  }
+  #p{
+    line-height: 4vh;
+  }
+  
+  #b{
+    border: none;
+    padding: 2vh;
+    margin: 2vh;
+    box-shadow: 3px 3px 10px #00000065, -2px -2px 10px #fff;
+  border-radius: 1vh;
+    font-family: Gotham !important;
+    background-color: red;
+    color: white;
+    outline: none;
+  }
+  
+  
+  #cancel{
+    position: absolute;
+    top: 17vh;
+    right: 5vw;
+    padding: 5px;
+  border-radius: 1vh;
+    border: none;
+    background: white;
+    color: red ;
+  }
+  #profilebackground i{
+    font-size: 5vh;
+  }
+  
+  
 
 
 .carousel-container{

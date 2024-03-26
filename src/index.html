@@ -9,6 +9,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://accounts.google.com/gsi/client" async></script>
+
+  <script>
+    function decodeJWTToken(token) {
+      return JSON.parse(atob(token.split(".")[1]));
+    }
+    function handleCredentialResponse(response) {
+      // to decode the credential response.
+      const responsePayload = decodeJWTToken(response.credential);
+      sessionStorage.setItem("loggedInUser", JSON.stringify(responsePayload));
+      localStorage.setItem("name", JSON.stringify(responsePayload.name));
+      localStorage.setItem("email", JSON.stringify(responsePayload.email));
+      localStorage.setItem("picture", JSON.stringify(responsePayload.picture));
+      localStorage.setItem("token", JSON.stringify(responsePayload.email))
+      window.location.href = "/userdashboard";
+    }
+    function handleSignout() {
+      google.accounts.id.disableAutoSelect();
+    }    
+  </script>
+
 </head>
 <body class="mat-typography">
   <app-root></app-root>

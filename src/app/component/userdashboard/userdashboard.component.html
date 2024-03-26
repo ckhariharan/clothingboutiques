@@ -3,9 +3,37 @@
   <div class="leftnavbar">
     <h5>Free shipping on all orders $75+</h5>
   </div>
-  <div class="rightnavbar">
-    <button (click)="logout()"> logout</button>
+
+  <div >  
+</div>
+<div class="profilepict" (click)="profile()" *ngIf="!profilePicture" >
+    <i class="bi bi-person"></i>
+
+</div>
+
+<div id="img">
+<img id="#button" *ngIf="profilePicture" (click)="profile()" [src]="profilePicture"/>
+</div>
+<div id="profilebackground"   *ngIf="profileopen">
+    <!-- <button >cancelButton</button> -->
+    <i id="cancel" (click)="profile()"  class="bi bi-x-square-fill"></i>
+  <div class="profilebody">
+    <div class="profileheader">
+    <div class="profileradius">
+    <img *ngIf="profilePicture" [src]="profilePicture"/>
+    <div class="profilepict1" *ngIf="!profilePicture" >
+    <i style="font-size: 8vh;"  class="bi bi-person"></i>
+</div>
+
+    </div>
+</div>
+<div id="profiledetail">
+    <p id="p">{{name}}</p>
+    <p id="p">{{email}}</p><br>
+    <button id="b" (click)="logout()"> logout</button>
+</div>
   </div>
+</div>
 </div>
 
 <div >

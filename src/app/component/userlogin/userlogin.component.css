@@ -75,7 +75,12 @@
      margin-right: 15%;
      width:20%;
 }
-
+#googleoauth{
+    width: 5vw;
+    height: 3vh;
+    padding: 6vh;
+    margin-right: 4vh;
+}
 
 .newmember{
     margin-inline-start: 20%;
@@ -172,6 +177,7 @@ button{
     text-transform: capitalize;
     font-weight: bold;
     font-size: 90%;
+    padding: 1.5vh;
 background-color: transparent;
 font-weight: 90px;
 margin-top: 1vh;

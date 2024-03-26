@@ -16,7 +16,6 @@ import { DatePipe } from '@angular/common';
 
 
 import {AngularFireModule} from '@angular/fire/compat';
-import { firebaseConfig } from './Config/firebase-config';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,6 +34,17 @@ import { AdminproductComponent } from './component/adminproduct/adminproduct.com
 import { MensComponent } from './component/mens/mens.component';
 import { WomensComponent } from './component/womens/womens.component';
 
+
+  
+  const firebase = {
+      apiKey: "AIzaSyAOFm98JLvxqJIDgRU55xpEm_IvxF4GaOs",
+      authDomain: "clothingboutiques-98562.firebaseapp.com",
+      projectId: "clothingboutiques-98562",
+      storageBucket: "clothingboutiques-98562.appspot.com",
+      messagingSenderId: "150741040884",
+      appId: "1:150741040884:web:9460a2d10bbde2a1c7a8a1",
+      measurementId: "G-7H5T6F1V47"
+  }
 
 
 @NgModule({
@@ -70,7 +80,8 @@ import { WomensComponent } from './component/womens/womens.component';
     MatDividerModule,
     DatePipe,
     SweetAlert2Module.forRoot(),
-AngularFireModule.initializeApp(firebaseConfig.firebase)
+    
+AngularFireModule.initializeApp(firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]

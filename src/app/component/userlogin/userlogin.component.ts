@@ -1,4 +1,4 @@
-import { Component, OnInit, } from '@angular/core';
+import { AfterViewInit, Component, OnInit, Renderer2, } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
@@ -13,14 +13,23 @@ interface User {
   templateUrl: './userlogin.component.html',
   styleUrls: ['./userlogin.component.css']
 })
-export class UserloginComponent implements OnInit {
+export class UserloginComponent implements OnInit,AfterViewInit {
   showPassword: boolean = false;
 
 
-  constructor(public router: Router, private http: HttpClient,private title:Title) { }
+  constructor(public router: Router,private renderer: Renderer2, private http: HttpClient,private title:Title) { }
 
 
+  ngAfterViewInit(): void {
+    this.addGoogleSignInScript();
+  }
 
+  private addGoogleSignInScript(): void {
+    const script = this.renderer.createElement('script');
+    script.src = 'https://accounts.google.com/gsi/client';
+    script.async = true;
+    this.renderer.appendChild(document.head, script);
+  }
 
   email: string = '';
   password: string = '';

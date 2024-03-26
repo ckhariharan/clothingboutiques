@@ -57,6 +57,8 @@ export class UserdashboardComponent implements OnInit {
 
   createOrderForm!: FormGroup;
   postMessage: any;
+  profileopen:boolean=false;
+profilepicture!:boolean;
 
   images: string[] = [
     'assets/images/user/banner1.jpg',
@@ -64,12 +66,18 @@ export class UserdashboardComponent implements OnInit {
     'assets/images/user/banner2.jpg',
   ];
   activeIndex: number = 0;
+  profilePicture!: string | null;
+  name: any;
 
 
   constructor(public router: Router, public userService: UserService,public productService: ProductService,  private formBuilder: FormBuilder, public adminService: AdminService,private http: HttpClient,private analytics:AngularFireAnalytics,private title:Title) { }
 
   logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+    localStorage.removeItem('picture');
+    localStorage.removeItem('staffData');
     this.router.navigateByUrl('/main');
   }
 
@@ -82,6 +90,10 @@ export class UserdashboardComponent implements OnInit {
   }
   
   ngOnInit(): void {
+
+    this.profilePicture = JSON.parse(localStorage.getItem("picture") || 'null');
+    this.name = JSON.parse(localStorage.getItem("name") || 'null');
+
 
     this.title.setTitle('userdashboard');
     if (localStorage.getItem('token') === null) {
@@ -124,6 +136,11 @@ all(){
   this.getAll()
 }
 
+profile(){
+  this.profileopen=!this.profileopen;
+}
+
+
 
   getAll() {
     this.isloading=true;
@@ -135,7 +152,7 @@ all(){
     });
   }
 
-
+ 
 
   openProduct(product: any) {
     this.diologData = product;
